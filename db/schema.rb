@@ -11,7 +11,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130624195420) do
+ActiveRecord::Schema.define(:version => 20130624200328) do
+
+  create_table "addresses", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "address1"
+    t.string   "address2"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zip"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.string   "name"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
