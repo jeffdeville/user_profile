@@ -11,6 +11,7 @@ gem 'devise'
 gem 'figaro'
 gem 'haml-rails'
 gem 'pg'
+gem 'activerecord-postgres-hstore'
 gem 'simple_form'
 gem 'thin'
 group :development do
