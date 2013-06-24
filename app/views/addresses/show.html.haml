@@ -1,6 +1,11 @@
 %p#notice= notice
+%address
+  .address1= @address.address1
+  .address2= @address.address2
+  .city= @address.city
+  .state= @address.state
+  .zip= @address.zip
 
-
-= link_to 'Edit', edit_address_path(@address)
+= link_to 'Edit', edit_user_address_path(current_user, @address)
 \|
-= link_to 'Back', addresses_path
+= link_to 'Back', user_addresses_path

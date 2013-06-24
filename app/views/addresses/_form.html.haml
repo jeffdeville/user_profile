@@ -1,6 +1,11 @@
-= simple_form_for(@address) do |f|
+= simple_form_for([current_user, @address]) do |f|
   = f.error_notification
-
+  = f.input :name
+  = f.input :address1
+  = f.input :address2
+  = f.input :city
+  = f.input :state
+  = f.input :zip
   .form-inputs
 
   .form-actions
