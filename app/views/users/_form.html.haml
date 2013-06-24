@@ -1,0 +1,9 @@
+= simple_form_for(current_user) do |f|
+  = f.error_notification
+  = f.input :name
+  - User::PROFILE_KEYS.each do |key|
+    = f.input key.to_sym
+  .form-inputs
+
+  .form-actions
+    = f.button :submit

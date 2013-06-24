@@ -3,3 +3,9 @@
   User: #{@user.name}
 %p
   Email: #{@user.email if @user.email}
+- User::PROFILE_KEYS.each do |key|
+  %p
+    = "#{key}: #{@user.send(key.to_sym) }"
+= link_to 'Edit', edit_user_path(current_user)
+\|
+= link_to 'Back', users_path

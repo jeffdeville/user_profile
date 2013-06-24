@@ -100,4 +100,26 @@ describe User do
 
   end
 
+  describe "profile fields" do
+    context "when the profile fields are not set" do
+      before(:each) do
+        @user = create :user
+      end
+
+      it "should expose each profile key as a field that is initially nil" do
+        expect(@user.likes_spinach).to be_nil
+        expect(@user.would_hire_jeff).to be_nil
+      end
+    end
+    context "when the profile fields are not set" do
+      before(:each) do
+        @user = create :user, :profile
+      end
+
+      it "should expose each profile key as a field that is initially nil" do
+        expect(@user.likes_spinach).to eq "true"
+        expect(@user.would_hire_jeff).to eq "in a heartbeat"
+      end
+    end
+  end
 end
